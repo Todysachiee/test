@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eee4d1">
+  <meta name="description" content="A little collection of our favorite memories.">
+  <title>Our Little Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="wordmark" href="#home">the memory archive <span>✳</span></a>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Play background music">
+      <span class="music-dot"></span><span id="musicLabel">play our song</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="intro-screen" id="intro">
+      <div class="intro-card">
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <div class="envelope" aria-hidden="true">
+          <div class="envelope-letter">for<br><span id="envelopeName">you</span></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <div class="wax-seal">✳</div>
+        </div>
+        <p class="handwritten intro-note">I made you a little something.</p>
+        <button class="primary-button" id="openGift" type="button">Open your gift <span>↗</span></button>
+        <p class="tiny-note">best experienced slowly ♡</p>
+      </div>
+    </section>
+
+    <div class="site-content" id="siteContent" aria-hidden="true">
+      <section class="hero section-wrap" id="home">
+        <div class="hero-kicker"><span>VOL. 01</span><span>A COLLECTION OF US</span><span id="heroDate">EST. 2025</span></div>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">TO MY FAVORITE PERSON</p>
+            <h1 id="heroTitle">Our little<br><em>world.</em></h1>
+            <p class="hero-subtitle" id="heroSubtitle">A thousand little moments, kept in one place.</p>
+            <a class="text-link" href="#timeline">turn the page <span>↓</span></a>
+          </div>
+          <figure class="hero-photo taped">
+            <img id="coverImage" src="images/cover-placeholder.svg" alt="A favorite memory">
+            <figcaption id="coverCaption">one of my favorite days</figcaption>
+          </figure>
+          <span class="scribble scribble-one">you + me</span>
+          <span class="scribble scribble-two">♡</span>
+        </div>
+        <div class="hero-footer"><span>MADE WITH LOVE, AND A LITTLE BIT OF NOSTALGIA</span><span>SCROLL TO EXPLORE ↓</span></div>
+      </section>
+
+      <section class="section-wrap timeline-section" id="timeline">
+        <div class="section-heading">
+          <p class="eyebrow">CHAPTER ONE · THE BEGINNING</p>
+          <h2>How it <em>all began.</em></h2>
+          <p>Some moments are too good to leave in the camera roll.</p>
+        </div>
+        <div class="timeline" id="timelineList"></div>
+      </section>
+
+      <section class="section-wrap gallery-section" id="gallery">
+        <div class="section-heading">
+          <p class="eyebrow">CHAPTER TWO · THE LITTLE MOMENTS</p>
+          <h2>Collected <em>memories.</em></h2>
+          <p>A few frames I wish I could step back into.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <p class="handwritten gallery-footnote">and a million more to come...</p>
+      </section>
+
+      <section class="section-wrap keepsakes-section" id="keepsakes">
+        <div class="section-heading">
+          <p class="eyebrow">CHAPTER THREE · THE LITTLE THINGS</p>
+          <h2>Things that remind<br>me of <em>you.</em></h2>
+          <p>Tap each keepsake. There's a little story tucked inside.</p>
+        </div>
+        <div class="keepsake-grid" id="keepsakeGrid"></div>
+      </section>
+
+      <section class="letter-section" id="letter">
+        <div class="letter-paper">
+          <p class="eyebrow">CHAPTER FOUR · A NOTE FOR YOU</p>
+          <div class="letter-flower">✿</div>
+          <h2 id="letterHeading">To my favorite person,</h2>
+          <div class="letter-body" id="letterBody"></div>
+          <p class="handwritten signature" id="letterSignature">always, yours.</p>
+          <button class="text-link replay-letter" id="replayLetter" type="button">read it again ↻</button>
+        </div>
+      </section>
+
+      <section class="ending-section section-wrap" id="ending">
+        <p class="eyebrow">UNTIL THE NEXT PAGE</p>
+        <h2>And this is only<br>the <em>beginning.</em></h2>
+        <img id="endingImage" src="images/ending-placeholder.svg" alt="One more favorite memory">
+        <p id="endingMessage">Here's to all the little moments we haven't made yet.</p>
+        <div class="anniversary-counter" id="counterWrap">
+          <span>TIME SINCE OUR DAY</span>
+          <strong id="anniversaryCount">—</strong>
+          <small>and counting ♡</small>
+        </div>
+        <button class="primary-button replay-site" id="replaySite" type="button">start from the beginning ↺</button>
+        <p class="final-mark handwritten">made just for you ♡</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"><span>THE MEMORY ARCHIVE</span><span>A LITTLE KEEPSAKE ON THE INTERNET</span></footer>
+
+  <audio id="backgroundMusic" preload="none"></audio>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
